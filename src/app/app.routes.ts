@@ -14,7 +14,11 @@ export const routes: Routes = [
   },
   {
     //el path no puede empezar con un /
-    path:'hero',
-    component:HeroPageComponent,
-  }
+    path: 'hero',
+    component: HeroPageComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
