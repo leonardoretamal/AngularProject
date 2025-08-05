@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 import { CounterPageComponent } from './pages/counter/counter-page';
 import { HeroPageComponent } from './pages/hero/hero-page';
+import { DragonballPage } from './pages/dragonball/dragonball-page';
 
 export const routes: Routes = [
   // /hola mundo => HolaMundoComponent
   // /admin => AdminComponent
   // /home => HomeComponent
   // /404 => NotFoundComponent
-
   {
     path: '',
     component: CounterPageComponent,
@@ -18,6 +18,10 @@ export const routes: Routes = [
     component: HeroPageComponent,
   },
   {
+    path: 'dragonball',
+    component: DragonballPage,
+  },
+  { //siempre al final
     path: '**',
     redirectTo: '',
   },

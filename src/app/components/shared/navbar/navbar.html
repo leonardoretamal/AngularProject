@@ -20,6 +20,9 @@
 
 <nav>
     <a routerLink="/" routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact: true}">Contador</a> //al poner exact true solo se activa cuando la ruta es exactamente /
+        [routerLinkActiveOptions]="{exact: true}">Contador</a> <!-- al poner exact
+    true solo se activa cuando la ruta es exactamente / -->
     <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+    <a [routerLink]="['/dragonball']" [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{exact:true}">Dragon Ball</a>
 </nav>
