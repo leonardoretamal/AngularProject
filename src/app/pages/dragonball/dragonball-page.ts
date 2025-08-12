@@ -1,11 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
-
-interface Characters {
-  id: number;
-  name: string;
-  power: number;
-}
+import { Characters } from '../../interfaces/character.interface';
 
 @Component({
   imports: [
@@ -13,11 +8,11 @@ interface Characters {
   ],
   templateUrl: './dragonball-page.html',
   styleUrl: './dragonball-page.css',
-  selector:'dragonball'
+  selector: 'dragonball',
 })
 export class DragonballPage {
   name = signal('');
-  power = signal(NaN);
+  power = signal(0);
 
   characters = signal<Characters[]>([
     { id: 1, name: 'Goku', power: 9001 },
