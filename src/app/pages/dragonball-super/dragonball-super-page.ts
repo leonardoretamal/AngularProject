@@ -11,20 +11,17 @@ interface Characters {
   imports: [
     /* NgClass */
   ],
-  templateUrl: './dragonball-page.html',
-  styleUrl: './dragonball-page.css',
-  selector:'dragonball'
+  templateUrl: './dragonball-super-page.html',
+  styleUrl: './dragonball-super-page.css',
+  selector:'dragonball-super'
 })
-export class DragonballPage {
+export class DragonballSuperPage {
   name = signal('');
-  power = signal(NaN);
+  power = signal(0);
 
   characters = signal<Characters[]>([
     { id: 1, name: 'Goku', power: 9001 },
-    /* { id: 2, name: 'Vegeta', power: 8000 },
-    { id: 3, name: 'Piccolo', power: 9000 },
-    { id: 4, name: 'Krillin', power: 3000 },
-    { id: 5, name: 'Yamcha', power: 500 }, */
+    { id: 2, name: 'Vegeta', power: 8000 },
   ]);
 
   addCharacter() {
@@ -46,10 +43,4 @@ export class DragonballPage {
     this.name.set('');
     this.power.set(NaN);
   }
-
-  /*  powerClasses = computed(() => {
-    return {
-      'text-danger':true,
-    }
-  }); */
 }
