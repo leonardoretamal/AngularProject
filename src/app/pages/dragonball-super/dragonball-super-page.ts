@@ -11,8 +11,14 @@ import { CharacterAdd } from '../../components/dragonball/character-add/characte
   selector: 'dragonball-super',
 })
 export class DragonballSuperPage {
+  //seria el get
   characters = signal<Characters[]>([
     { id: 1, name: 'Goku', power: 9001 },
     { id: 2, name: 'Vegeta', power: 8000 },
   ]);
+
+  //seria el post
+  addCharacter(character: Characters) {
+    this.characters.update((list) => [...list, character]);
+  }
 }
