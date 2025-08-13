@@ -7,5 +7,5 @@ import { Characters } from '../../../interfaces/character.interface';
 })
 export class CharacterList {
   characters = input.required<Characters[]>(); //se pone required solo si es necesario que tenga los datos del componente padre si o si
-
+  listName = input.required<string>()
 }
